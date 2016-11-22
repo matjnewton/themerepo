@@ -20,6 +20,7 @@ require_once CORE_PATH.'/rezdy_api/init.php';
 $dirs = array(
     CORE_PATH . '/post_types/',
     CORE_PATH . '/functions/',
+    CORE_PATH . '/acf/',
 );
 foreach ($dirs as $dir) {
     $other_inits = array();
