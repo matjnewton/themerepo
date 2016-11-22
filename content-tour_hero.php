@@ -30,8 +30,10 @@ if( have_rows('hero_area') ):
          <a href="<?php if($video_button_link): echo $video_button_link; else: echo '#'; endif; ?>" class="video-play popup-video">
          <?php endif; ?>
         <div class="banner-top">
-        
-                    
+                
+                <!-- update dgamoni include search box -->
+                <?php get_template_part( 'page-templates/search/search_box' ); ?>
+
                     <div class="flxslider-wrapper">
                         <?php $images = get_sub_field('hero_slides');    
                                 ?>

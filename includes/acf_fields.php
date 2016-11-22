@@ -404,6 +404,7 @@ acf_add_local_field_group(array (
 								'Link to Featured tours' => 'Link to Featured tours',
 								'Use as third party integration Link' => 'Use as third party integration Link',
 								'Play Video' => 'Play Video',
+								'Search Box' => 'Search Box',
 							),
 							'other_choice' => 0,
 							'save_other_choice' => 0,
@@ -411,6 +412,93 @@ acf_add_local_field_group(array (
 							'layout' => 'vertical',
 							'allow_null' => 0,
 						),
+						// dgamoni update add search settings
+						array (
+							'key' => 'field_56c31f2c3377a_settings_type',
+							'label' => 'Search settings',
+							'name' => 'search_settings_type',
+							'type' => 'radio',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => array (
+								array (
+									array (
+										'field' => 'field_53d247c8b4b03',
+										'operator' => '==',
+										'value' => 'Search Box',
+									),
+								),
+							),
+							'wrapper' => array (
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'choices' => array (
+								'Search by date range' => 'Search by date range',
+								'Search by one date' => 'Search by one date',
+							),
+							'other_choice' => 0,
+							'save_other_choice' => 0,
+							'default_value' => 'Search by date range',
+							'layout' => 'horizontal',
+							'allow_null' => 0,
+						),
+						array (
+							'key' => 'field_552061311b125_settings_type_category',
+							'label' => 'Search by categories',
+							'name' => 'search_settings_type_category',
+							'type' => 'true_false',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => array (
+								array (
+									array (
+										'field' => 'field_53d247c8b4b03',
+										'operator' => '==',
+										'value' => 'Search Box',
+									),
+								),
+							),
+							'wrapper' => array (
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'message' => '',
+							'default_value' => 0,
+						),
+						array (
+							'key' => 'field_58252299a702f_settings_type_category_select',
+							'label' => 'Select categories',
+							'name' => 'search_settings_type_category_select',
+							'type' => 'taxonomy',
+							'instructions' => 'the default is the current category',
+							'required' => 0,
+							'conditional_logic' => array (
+								array (
+									array (
+										'field' => 'field_552061311b125_settings_type_category',
+										'operator' => '==',
+										'value' => '1',
+									),
+								),
+							),
+							'wrapper' => array (
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'taxonomy' => 'tour_cat',
+							'field_type' => 'multi_select',
+							'allow_null' => 1,
+							'add_term' => 1,
+							'save_terms' => 0,
+							'load_terms' => 0,
+							'return_format' => 'object',
+							'multiple' => 0,
+						),
+						// end search set
 						array (
 							'key' => 'field_5614fa0802309',
 							'label' => 'Third party',
