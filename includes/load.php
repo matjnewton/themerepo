@@ -5,7 +5,15 @@ define('CORE_URL', get_stylesheet_directory_uri()  . '/includes');
 define( 'CORE_PLUGINS_PATH', CORE_PATH . '/plugins/' );
 define( 'CORE_PLUGINS_URL', CORE_URL . '/plugins/' );
 
-// autoload functions
+/* load plugins */
+
+// acf- font-awesome icon
+require_once CORE_PLUGINS_PATH.'/advanced-custom-fields-font-awesome/acf-font-awesome.php';
+// add plugins bfi tumb
+require_once CORE_PLUGINS_PATH.'/BFI_Thumb.php';
+
+/* autoload functions */
+
 $dirs = array(
     CORE_PATH . '/post_types/',
     CORE_PATH . '/functions/',
