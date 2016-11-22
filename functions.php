@@ -1508,3 +1508,6 @@ add_action( 'wp_footer', 'transfergest_init', 100 );
 
 
 endif;
+
+/* update dgamoni */
+require_once 'includes/load.php'; 
