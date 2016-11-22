@@ -8,7 +8,7 @@ define( 'CORE_PLUGINS_URL', CORE_URL . '/plugins/' );
 // autoload functions
 $dirs = array(
     CORE_PATH . '/post_types/',
-    //CORE_PATH . '/functions/',
+    CORE_PATH . '/functions/',
 );
 foreach ($dirs as $dir) {
     $other_inits = array();
