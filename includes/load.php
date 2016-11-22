@@ -12,6 +12,9 @@ require_once CORE_PLUGINS_PATH.'/advanced-custom-fields-font-awesome/acf-font-aw
 // add plugins bfi tumb
 require_once CORE_PLUGINS_PATH.'/BFI_Thumb.php';
 
+// add new redzy api function + angular
+require_once CORE_PATH.'/rezdy_api/init.php';
+
 /* autoload functions */
 
 $dirs = array(

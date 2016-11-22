@@ -1,0 +1,11 @@
+.home_page_search_2 {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    top: 64%;
+    z-index: 99999;
+} 
+
+.timearrayLoadmore {
+	/*min-height: 510px;*/
+}
