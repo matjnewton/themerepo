@@ -149,7 +149,7 @@ function tourtiger_archive(){
                                                             </span>
                                                         </div>
                                                         <div class="search-descript-button">
-                                                            <a href="{{cptproducts.link}}" class="viewtour button-viewtour">View Tour</a>
+                                                            <a href="{{cptproducts.link}}?check_date={{timearrays | asDate}}" class="viewtour button-viewtour">View Tour</a>
                                                             <a href="{{cptproducts.custom_button_link}}" class="viewtour button-viewtour button-book">Book now</a>
                                                         </div>
                                                 </div>
@@ -217,7 +217,7 @@ function tourtiger_archive(){
                                                             </span>
                                                         </div>
                                                         <div class="search-descript-button">
-                                                            <a href="{{cptproducts.link}}" class="viewtour button-viewtour">View Tour</a>
+                                                            <a href="{{cptproducts.link}}?check_date={{timearrays | asDate}}" class="viewtour button-viewtour">View Tour</a>
                                                             <a href="{{cptproducts.custom_button_link}}" class="viewtour button-viewtour button-book">Book now</a>
                                                         </div>
                                                 </div>
@@ -252,7 +252,7 @@ function tourtiger_archive(){
                                                             </span>
                                                         </div>
                                                         <div class="search-descript-button">
-                                                            <a href="{{cptproducts.link}}" class="viewtour button-viewtour">View Tour</a>
+                                                            <a href="{{cptproducts.link}}?check_date={{timearrays | asDate}}" class="viewtour button-viewtour">View Tour</a>
                                                             <a href="{{cptproducts.custom_button_link}}" class="viewtour button-viewtour button-book">Book now</a>
                                                         </div>
                                                 </div>
