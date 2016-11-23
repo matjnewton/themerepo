@@ -2,13 +2,30 @@
 
 define('CORE_PATH', get_stylesheet_directory() . '/includes');
 define('CORE_URL', get_stylesheet_directory_uri()  . '/includes');
-define( 'CORE_PLUGINS_PATH', CORE_PATH . '/plugins/' );
-define( 'CORE_PLUGINS_URL', CORE_URL . '/plugins/' );
+define( 'CORE_PLUGINS_PATH', CORE_PATH . '/plugins' );
+define( 'CORE_PLUGINS_URL', CORE_URL . '/plugins' );
+
 
 /* load plugins */
 
 // acf- font-awesome icon
 require_once CORE_PLUGINS_PATH.'/advanced-custom-fields-font-awesome/acf-font-awesome.php';
+
+
+// acf_accordion
+include_once( CORE_PLUGINS_PATH.'/acf-accordion/acf-accordion-v5.php' );
+add_filter( 'acf/accordion/dir', 'acf_accordion_dir' );
+function acf_accordion_dir( $dir ) {
+    $dir = get_stylesheet_directory_uri() . '/includes/plugins/acf-accordion/';
+    return $dir;
+}
+
+// acf-rgba-color
+include_once( CORE_PLUGINS_PATH.'/acf-rgba-color/acf-rgba-color-v5.php' );
+
+// acf-typography
+include_once( CORE_PLUGINS_PATH.'/acf-typography/acf-typography-v5.php' );
+
 // add plugins bfi tumb
 require_once CORE_PLUGINS_PATH.'/BFI_Thumb.php';
 
