@@ -62,7 +62,7 @@ function tourtiger_archive_xola(){
                 </div> -->
                 <div class="row">
                   <div class="col-md-3 search-sidebar-wrap" id="searchfilter" >
-                      <?php get_template_part( 'page-templates/search/search_box_sidebar' ); ?>
+                      <?php get_template_part( 'page-templates/search/search_box_sidebar_xola' ); ?>
                   </div>
                  <!--  <div id="ajax_preLoading" class="preLoading2"></div> -->
 
