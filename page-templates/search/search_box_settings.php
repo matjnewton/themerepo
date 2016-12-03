@@ -74,7 +74,7 @@ $search_content = null;
             <div class="home_page_search">
                 <div class="container">
                     <div class="row">
-                        <form class="form-horizontal" action="http://borasite.lightningbasehosted.com/search/" method="get">
+                        <form class="form-horizontal" action="/search/" method="get">
                             '. $block .'
                             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 rezdy_box one_date_hide">
                             </div>
