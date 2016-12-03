@@ -186,6 +186,9 @@ $hero_margin = get_field('hero_headline_top_margin');
 .banner-top .headline-group{        
         top:<?php echo $hero_margin; ?>px;
     }
+.home_page_search {
+    margin-top:<?php echo $hero_margin+20; ?>px;
+}
 @media (min-width: 768px) {
         .banner-top .headline-group{       
         top:<?php echo $hero_margin; ?>px;
