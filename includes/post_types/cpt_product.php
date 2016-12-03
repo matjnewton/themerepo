@@ -1,4 +1,4 @@
- <?php 
+<?php 
  // Register rezdy product  Post Type
 function product_post_type() {
 
