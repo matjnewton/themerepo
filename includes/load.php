@@ -75,5 +75,5 @@ if ($integrate_rezdy) {
 
 // xola api function + angular
 if ($integrate_xola) {
-   //require_once CORE_PATH.'/xola_api/init.php';
+   require_once CORE_PATH.'/xola_api/init.php';
 }
