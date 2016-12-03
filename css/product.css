@@ -1030,3 +1030,51 @@ line-height: 40px;
 .next_day:hover, .prev_day:hover {
     cursor: pointer;
 }
+
+/*for xola*/
+.search-descript-departure-xola {
+  position: absolute;
+    bottom: 15px;
+    font-size: 13px;
+    color: #9b9b9b;
+        width: 30%; /*new design*/
+}
+.styles .site-container .tour-page-content {
+    font-family: Roboto, sans-serif;
+}
+
+.styles .site-inner .content a.button-viewtour:hover {
+  color:white;
+}
+
+#startTime.rezdy_date,
+#endTime.rezdy_date {
+    font-size: 20px;
+    height: 60px;
+    border: 2px solid white;
+    color: #797979;
+    background: white;
+    border: solid 1px #979797;
+    border-radius: inherit;
+    font-weight: 500;
+    width: 255px;
+    font-family: Roboto;
+}
+#startTime.rezdy_date:focus,
+#endTime.rezdy_date:focus {
+    outline: inherit;
+    box-shadow: inherit;
+    border: solid 1px #979797;
+}
+.home_page_search .rezdy_search,
+.home_page_search .rezdy_search:hover,
+.home_page_search .rezdy_search:focus,
+.home_page_search .rezdy_search:active,
+.home_page_search .btn-success.rezdy_search:active:focus {
+    border: none;
+    color: white;
+    background-color: #f3b04a;
+}
+.departure-text-0 {
+  
+}

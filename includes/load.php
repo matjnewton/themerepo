@@ -11,7 +11,6 @@ define( 'CORE_PLUGINS_URL', CORE_URL . '/plugins' );
 // acf- font-awesome icon
 require_once CORE_PLUGINS_PATH.'/advanced-custom-fields-font-awesome/acf-font-awesome.php';
 
-
 // acf_accordion
 include_once( CORE_PLUGINS_PATH.'/acf-accordion/acf-accordion-v5.php' );
 add_filter( 'acf/accordion/dir', 'acf_accordion_dir' );
@@ -28,9 +27,6 @@ include_once( CORE_PLUGINS_PATH.'/acf-typography/acf-typography-v5.php' );
 
 // add plugins bfi tumb
 require_once CORE_PLUGINS_PATH.'/BFI_Thumb.php';
-
-// add new redzy api function + angular
-require_once CORE_PATH.'/rezdy_api/init.php';
 
 /* autoload functions */
 
@@ -59,3 +55,25 @@ foreach ($dirs as $dir) {
             include_once $dir . $other_init;
     }
 } 
+
+/* load integrate api functions */
+
+$integrate_xola = get_field('integrate_xola_with_this_website', 'option');
+$integrate_rezdy = get_field('rezdy', 'option');
+$integrate_api = true;
+
+// enable integrate, load cpt, angularjs
+if ($integrate_api) {
+   require_once CORE_PATH.'/init_api/post_type_api.php';
+   require_once CORE_PATH.'/init_api/init_angular.php';  
+}
+
+// redzy api function + angular
+if ($integrate_rezdy) {
+   require_once CORE_PATH.'/rezdy_api/init.php';
+}
+
+// xola api function + angular
+if ($integrate_xola) {
+   //require_once CORE_PATH.'/xola_api/init.php';
+}
