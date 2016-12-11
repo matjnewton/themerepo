@@ -59,15 +59,27 @@ function get_cpt_tours_select_checker($field) {
 	$tours_array = array();
 	$our_tours = array(); 
 
-	if( have_rows('matching_products', 'option') ): 
+	$integrate_xola_with_this_website = get_field('integrate_xola_with_this_website', 'option');
+	$integrate_rezdy_with_this_website = get_field('rezdy', 'option');
+
+	//xola
+	if( have_rows('matching_products_xola', 'option') && $integrate_xola_with_this_website ): 
 		while( have_rows('matching_products', 'option') ): the_row(); 
 			$our_tours[] = get_sub_field('our_tours');
 		endwhile; 
-	endif; 
+	endif;
+
+	// rezdy
+	if( have_rows('matching_products', 'option') && $integrate_rezdy_with_this_website ): 
+		while( have_rows('matching_products', 'option') ): the_row(); 
+			$our_tours[] = get_sub_field('our_tours');
+		endwhile; 
+	endif;
 
 
 	foreach ($our_tours as $res){
-	 	$field['choices'][ $res ] = get_the_title( $res );
+		$post_type = get_post_type( $res );
+	 	$field['choices'][ $res ] = get_the_title( $res ).' ('.$post_type.')';
 	 }
 	 return $field;
 } 
