@@ -1078,3 +1078,9 @@ line-height: 40px;
 .departure-text-0 {
   
 }
+
+
+/*fix xola 11-12-16 */
+.availability_checker_options_date .rezdy_date:focus {
+  border: solid 1px #ebe7e5;
+}

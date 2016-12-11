@@ -22,6 +22,11 @@ function wqs_load_scripts_xola()
             'integrate_xola' => get_field('integrate_xola_with_this_website', 'option'),
              )
     );
+    wp_localize_script( 'wqs_functions_for_check_available_xola', 'js_var', 
+        array( 
+            'userid_key' => get_field('field_n1993k2903_xola', 'option'),
+             )
+    );
 }
 
 add_action('wp_enqueue_scripts', 'wqs_load_scripts_xola');
