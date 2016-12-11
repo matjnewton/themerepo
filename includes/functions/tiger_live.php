@@ -34,12 +34,19 @@ function get_cpt_tours_select($field) {
 	global $wpdb;
 	$table = $wpdb->prefix."posts";
 	$query = "SELECT * FROM ".$table." WHERE post_type='tour' AND post_status='publish'";
+	$query2 = "SELECT * FROM ".$table." WHERE post_type='product' AND post_status='publish'";
 	$results = $wpdb->get_results($query);
+	$results2 = $wpdb->get_results($query2);
+	$full_result = array_merge($results,$results2);
 	$tours_array = array();
 
-	foreach ($results as $res){
+	// foreach ($results as $res){
+	//  	$tours_array[] = $res->post_title;
+	//  	$field['choices'][ $res->ID ] = $res->post_title;
+	//  }
+	foreach ($full_result as $res){
 	 	$tours_array[] = $res->post_title;
-	 	$field['choices'][ $res->ID ] = $res->post_title;
+	 	$field['choices'][ $res->ID ] = $res->post_title.' ('.$res->post_type.')';
 	 }
 	 return $field;
 } 

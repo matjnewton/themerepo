@@ -23,8 +23,8 @@ function getWqsApi() {
 
         $args = array(
             // 'post_type' => array('product'),
-            //'post_type' => array('tour','product'),
-            'post_type' => array('tour'),
+            'post_type' => array('tour','product'),
+            //'post_type' => array('tour'),
             'posts_per_page' => -1
         );
         $mainObj=array();
