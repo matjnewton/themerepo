@@ -64,8 +64,8 @@ function get_cpt_tours_select_checker($field) {
 
 	//xola
 	if( have_rows('matching_products_xola', 'option') && $integrate_xola_with_this_website ): 
-		while( have_rows('matching_products', 'option') ): the_row(); 
-			$our_tours[] = get_sub_field('our_tours');
+		while( have_rows('matching_products_xola', 'option') ): the_row(); 
+			$our_tours[] = get_sub_field('our_tours_forxola');
 		endwhile; 
 	endif;
 
